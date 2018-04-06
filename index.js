@@ -10,7 +10,11 @@ exports.npmignore = function() {
   let git = fs.readFile('.gitignore').trim().split('\n')
 
   // Negation in .npmignore overrides .gitignore
-  git = git.filter(path => !npm.includes('!' + path))
+  git = git.filter(path => {
+    if (npm.includes('!' + path)) {
+      npm.splice(npm.indexOf('!' + path), 1)
+    } else return true
+  })
 
   // Merge .npmignore into .gitignore without duplicates
   npm.forEach(path => git.includes(path) || git.push(path))

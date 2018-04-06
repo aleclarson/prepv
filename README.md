@@ -1,4 +1,4 @@
-# prepv v0.0.1
+# prepv v0.0.2
 
 Prepare your package to be distributed.
 

@@ -1,0 +1,12 @@
+{
+  "name": "prepv",
+  "version": "0.0.1",
+  "bin": {
+    "prepv": "cli.js"
+  },
+  "dependencies": {
+    "fsx": "aleclarson/fsx#1.6.0",
+    "huey": "aleclarson/huey#1.1.1",
+    "slurm": "^0.3.0"
+  }
+}
